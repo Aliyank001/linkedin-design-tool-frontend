@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer - LinkedIn Design Tool</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/designer.css">
+    <link rel="stylesheet" href="css/loading.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h1>LinkedIn Design Pro</h1>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="designer.html" class="nav-link active">Designer</a>
+                    <span class="user-info" id="userInfoNav" style="display: none;">
+                        <span id="userName"></span>
+                        <button class="btn-logout" id="logoutBtn">Logout</button>
+                    </span>
+                    <a href="login.html" class="nav-link" id="loginLink">Login</a>
+                    <a href="register.html" class="btn btn-primary" id="registerLink">Get Started</a>
+                </div>
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Designer App -->
+    <div class="designer-app">
+        <!-- Mode Selector -->
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="cover">
+                <span class="mode-icon">🖼️</span>
+                LinkedIn Cover
+            </button>
+            <button class="mode-btn" data-mode="post">
+                <span class="mode-icon">📄</span>
+                LinkedIn Post
+            </button>
+        </div>
+
+        <!-- Main Designer Layout -->
+        <div class="designer-layout">
+            <!-- Left Panel - Tools -->
+            <div class="left-panel">
+                <div class="panel-section">
+                    <h3 class="panel-title">Templates</h3>
+                    <div class="templates-grid" id="templatesGrid">
+                        <!-- Templates will be dynamically loaded -->
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="panel-title">Theme</h3>
+                    <div class="theme-selector">
+                        <button class="theme-btn" data-theme="professional" style="background: linear-gradient(135deg, #0077b5, #00a0dc);">
+                            <span>Professional Blue</span>
+                        </button>
+                        <button class="theme-btn" data-theme="modern" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+                            <span>Modern Purple</span>
+                        </button>
+                        <button class="theme-btn" data-theme="elegant" style="background: linear-gradient(135deg, #1f2937, #374151);">
+                            <span>Elegant Dark</span>
+                        </button>
+                        <button class="theme-btn" data-theme="vibrant" style="background: linear-gradient(135deg, #f43f5e, #fb923c);">
+                            <span>Vibrant Orange</span>
+                        </button>
+                        <button class="theme-btn" data-theme="success" style="background: linear-gradient(135deg, #10b981, #059669);">
+                            <span>Success Green</span>
+                        </button>
+                        <button class="theme-btn" data-theme="minimal" style="background: linear-gradient(135deg, #ffffff, #f3f4f6); border: 1px solid #e5e7eb;">
+                            <span style="color: #1f2937;">Minimal White</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="panel-title">Text Content</h3>
+                    <div class="form-group">
+                        <label for="headlineText">Headline</label>
+                        <input type="text" id="headlineText" class="form-control" placeholder="Your headline here" value="Professional LinkedIn Designer">
+                    </div>
+                    <div class="form-group">
+                        <label for="subtextText">Subtext / Description</label>
+                        <textarea id="subtextText" class="form-control" rows="3" placeholder="Your description here">Creating Impact Through Design</textarea>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="panel-title">Typography</h3>
+                    <div class="form-group">
+                        <label for="fontFamily">Font Family</label>
+                        <select id="fontFamily" class="form-control">
+                            <option value="'Segoe UI', sans-serif">Segoe UI</option>
+                            <option value="Arial, sans-serif">Arial</option>
+                            <option value="'Georgia', serif">Georgia</option>
+                            <option value="'Courier New', monospace">Courier New</option>
+                            <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+                            <option value="'Times New Roman', serif">Times New Roman</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="headlineFontSize">Headline Size</label>
+                        <div class="slider-group">
+                            <input type="range" id="headlineFontSize" class="form-range" min="20" max="60" value="36">
+                            <span id="headlineSizeValue">36px</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subtextFontSize">Subtext Size</label>
+                        <div class="slider-group">
+                            <input type="range" id="subtextFontSize" class="form-range" min="12" max="32" value="18">
+                            <span id="subtextSizeValue">18px</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="panel-title">Text Alignment</h3>
+                    <div class="alignment-buttons">
+                        <button class="align-btn" data-align="left" title="Align Left">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <line x1="3" y1="12" x2="15" y2="12"></line>
+                                <line x1="3" y1="18" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                        <button class="align-btn active" data-align="center" title="Align Center">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <line x1="6" y1="12" x2="18" y2="12"></line>
+                                <line x1="4" y1="18" x2="20" y2="18"></line>
+                            </svg>
+                        </button>
+                        <button class="align-btn" data-align="right" title="Align Right">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <line x1="9" y1="12" x2="21" y2="12"></line>
+                                <line x1="6" y1="18" x2="21" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="panel-title">Text Position</h3>
+                    <div class="position-controls">
+                        <button class="position-btn" data-direction="up" title="Move Up">↑</button>
+                        <div class="position-row">
+                            <button class="position-btn" data-direction="left" title="Move Left">←</button>
+                            <button class="position-btn" data-direction="reset" title="Reset Position">⟲</button>
+                            <button class="position-btn" data-direction="right" title="Move Right">→</button>
+                        </div>
+                        <button class="position-btn" data-direction="down" title="Move Down">↓</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel - Preview -->
+            <div class="right-panel">
+                <div class="preview-header">
+                    <h3>Live Preview</h3>
+                    <div class="preview-info">
+                        <span id="canvasDimensions">1584 × 396</span>
+                    </div>
+                </div>
+                
+                <div class="preview-container">
+                    <canvas id="designCanvas"></canvas>
+                </div>
+
+                <div class="download-section">
+                    <h4>Download Your Design</h4>
+                    <div class="download-buttons">
+                        <button class="btn btn-primary" id="downloadPNG">
+                            <span>⬇️</span> Download PNG
+                        </button>
+                        <button class="btn btn-secondary" id="downloadJPG">
+                            <span>⬇️</span> Download JPG
+                        </button>
+                    </div>
+                    <p class="download-note">Your design will download at optimal LinkedIn dimensions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p id="loadingText">Loading designer...</p>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/designer.js"></script>
+</body>
+</html>

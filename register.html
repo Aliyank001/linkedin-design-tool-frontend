@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - LinkedIn Design Tool</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/loading.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h1>LinkedIn Design Pro</h1>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="designer.html" class="nav-link">Designer</a>
+                    <a href="login.html" class="nav-link">Login</a>
+                </div>
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Register Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-box">
+                    <div class="auth-header">
+                        <h2>Create Your Account</h2>
+                        <p>Start creating professional LinkedIn designs today</p>
+                    </div>
+
+                    <form id="registerForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input 
+                                type="text" 
+                                id="fullName" 
+                                name="fullName" 
+                                class="form-control" 
+                                placeholder="Enter your full name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-control" 
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password *</label>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                class="form-control" 
+                                placeholder="Create a strong password"
+                                required
+                            >
+                            <small class="form-hint">Minimum 8 characters</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password *</label>
+                            <input 
+                                type="password" 
+                                id="confirmPassword" 
+                                name="confirmPassword" 
+                                class="form-control" 
+                                placeholder="Re-enter your password"
+                                required
+                            >
+                        </div>
+
+                        <div class="divider">
+                            <span>Payment Information</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paymentMethod">Payment Method *</label>
+                            <select id="paymentMethod" name="paymentMethod" class="form-control" required>
+                                <option value="">Select payment method</option>
+                                <option value="binance">Binance</option>
+                                <option value="easypaisa">EasyPaisa</option>
+                                <option value="nayapay">NayaPay</option>
+                            </select>
+                        </div>
+
+                        <div class="payment-details" id="paymentDetails" style="display: none;">
+                            <div class="alert alert-info">
+                                <h4>Payment Instructions</h4>
+                                <div id="paymentInstructions"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paymentScreenshot">Upload Payment Screenshot *</label>
+                            <div class="file-upload-wrapper">
+                                <input 
+                                    type="file" 
+                                    id="paymentScreenshot" 
+                                    name="paymentScreenshot" 
+                                    accept="image/*"
+                                    required
+                                >
+                                <label for="paymentScreenshot" class="file-upload-label">
+                                    <span class="file-upload-icon">📎</span>
+                                    <span class="file-upload-text">Choose file or drag here</span>
+                                </label>
+                                <div class="file-preview" id="filePreview"></div>
+                            </div>
+                            <small class="form-hint">Upload a clear screenshot of your payment confirmation</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                                <span>I agree to the Terms of Service and Privacy Policy</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large btn-block">
+                            Create Account
+                        </button>
+                    </form>
+
+                    <div class="auth-footer">
+                        <p>Already have an account? <a href="login.html">Login here</a></p>
+                    </div>
+                </div>
+
+                <div class="auth-info">
+                    <div class="info-card">
+                        <h3>📋 Registration Process</h3>
+                        <ol>
+                            <li>Fill in your account details</li>
+                            <li>Choose your payment method</li>
+                            <li>Complete payment ($29/month)</li>
+                            <li>Upload payment screenshot</li>
+                            <li>Submit registration</li>
+                        </ol>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>⏱️ Manual Approval</h3>
+                        <p>Your account will be activated after manual verification by our admin team. This typically takes:</p>
+                        <ul>
+                            <li>✓ Up to 24 hours on weekdays</li>
+                            <li>✓ Up to 48 hours on weekends</li>
+                        </ul>
+                        <p>You'll receive an email confirmation once approved.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>💳 Payment Details</h3>
+                        <div class="payment-info">
+                            <p><strong>Subscription:</strong> $29/month</p>
+                            <p><strong>Includes:</strong></p>
+                            <ul>
+                                <li>Unlimited LinkedIn covers</li>
+                                <li>Unlimited LinkedIn posts</li>
+                                <li>All premium templates</li>
+                                <li>HD downloads (PNG & JPG)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon success">✓</div>
+            <h2>Registration Submitted Successfully!</h2>
+            <p>Thank you for registering with LinkedIn Design Pro.</p>
+            <div class="modal-info">
+                <p><strong>What happens next?</strong></p>
+                <ul>
+                    <li>Our team will verify your payment screenshot</li>
+                    <li>Your account will be activated within 24 hours</li>
+                    <li>You'll receive an email confirmation</li>
+                    <li>Once approved, you can login and start designing</li>
+                </ul>
+            </div>
+            <button class="btn btn-primary" onclick="window.location.href='index.html'">
+                Back to Home
+            </button>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p id="loadingText">Processing...</p>
+        </div>
+    </div>
+
+    <script src="js/register.js"></script>
+</body>
+</html>

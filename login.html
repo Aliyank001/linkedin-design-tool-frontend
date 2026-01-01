@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LinkedIn Design Tool</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/loading.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h1>LinkedIn Design Pro</h1>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="designer.html" class="nav-link">Designer</a>
+                    <a href="register.html" class="nav-link">Register</a>
+                </div>
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container login-container">
+                <div class="auth-box">
+                    <div class="auth-header">
+                        <h2>Welcome Back</h2>
+                        <p>Login to access your LinkedIn design studio</p>
+                    </div>
+
+                    <form id="loginForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="loginEmail" 
+                                name="email" 
+                                class="form-control" 
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input 
+                                type="password" 
+                                id="loginPassword" 
+                                name="password" 
+                                class="form-control" 
+                                placeholder="Enter your password"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="rememberMe" name="rememberMe">
+                                <span>Remember me</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large btn-block">
+                            Login
+                        </button>
+                    </form>
+
+                    <div class="auth-divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="auth-links">
+                        <a href="#" class="link-secondary">Forgot Password?</a>
+                    </div>
+
+                    <div class="auth-footer">
+                        <p>Don't have an account? <a href="register.html">Register here</a></p>
+                    </div>
+                </div>
+
+                <div class="auth-info login-info">
+                    <div class="info-card">
+                        <h3>⚠️ Account Approval Required</h3>
+                        <p>Login functionality will only work after your account has been manually approved by our admin team.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>📝 Approval Process</h3>
+                        <p>If you've recently registered:</p>
+                        <ol>
+                            <li>Wait for payment verification (up to 24 hours)</li>
+                            <li>Check your email for approval confirmation</li>
+                            <li>Once approved, return here to login</li>
+                        </ol>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>💡 What You Get Access To</h3>
+                        <p>Once logged in, you'll have access to:</p>
+                        <ul>
+                            <li>✓ Unlimited LinkedIn cover designs</li>
+                            <li>✓ Unlimited LinkedIn post designs</li>
+                            <li>✓ All premium templates</li>
+                            <li>✓ High-quality downloads</li>
+                            <li>✓ Save and edit your designs</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card help-card">
+                        <h3>🆘 Need Help?</h3>
+                        <p>If you're having trouble logging in or your account hasn't been approved yet, please contact our support team.</p>
+                        <a href="#" class="btn btn-secondary">Contact Support</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Modal -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon info">ℹ️</div>
+            <h2>Account Pending Approval</h2>
+            <p>Your account is currently pending manual approval by our admin team.</p>
+            <div class="modal-info">
+                <p><strong>This is a demo login system.</strong></p>
+                <p>In a production environment, login would only work after:</p>
+                <ul>
+                    <li>Payment verification is complete</li>
+                    <li>Admin has manually approved your account</li>
+                    <li>You've received email confirmation</li>
+                </ul>
+                <p>Please check back within 24 hours or contact support if you need assistance.</p>
+            </div>
+            <button class="btn btn-primary" onclick="closeModal()">
+                Understood
+            </button>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p id="loadingText">Logging in...</p>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
