@@ -24,11 +24,11 @@ document.addEventListener('DOMContentLoaded', function() {
         binance: {
             title: 'Binance Payment',
             instructions: `
-                <p><strong>Pay $29 via Binance:</strong></p>
+                <p><strong>Pay $1 via Binance:</strong></p>
                 <ol>
                     <li>Open your Binance app</li>
                     <li>Go to Pay → Send</li>
-                    <li>Send <strong>$29 USDT</strong> to:</li>
+                    <li>Send <strong>$1 USDT</strong> to:</li>
                     <li><code style="background: #f3f4f6; padding: 0.5rem; border-radius: 4px; display: block; margin: 0.5rem 0;">binance_wallet_id_here</code></li>
                     <li>Take a screenshot of the confirmation</li>
                     <li>Upload the screenshot below</li>
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <ol>
                     <li>Open EasyPaisa app</li>
                     <li>Go to Send Money</li>
-                    <li>Send <strong>PKR 8,000</strong> to:</li>
+                    <li>Send <strong>PKR 300</strong> to:</li>
                     <li><code style="background: #f3f4f6; padding: 0.5rem; border-radius: 4px; display: block; margin: 0.5rem 0;">03XX-XXXXXXX</code></li>
                     <li>Take a screenshot of the transaction</li>
                     <li>Upload the screenshot below</li>
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <ol>
                     <li>Open NayaPay app</li>
                     <li>Go to Send Money</li>
-                    <li>Send <strong>PKR 8,000</strong> to:</li>
+                    <li>Send <strong>PKR 300</strong> to:</li>
                     <li><code style="background: #f3f4f6; padding: 0.5rem; border-radius: 4px; display: block; margin: 0.5rem 0;">03XX-XXXXXXX</code></li>
                     <li>Take a screenshot of the confirmation</li>
                     <li>Upload the screenshot below</li>
